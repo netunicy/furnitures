@@ -1,0 +1,9 @@
+secret_key.txt
+
+commands.txt
+
+db.sqlite3
+
+.venv/
+
+stripe_keys.txt
