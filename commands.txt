@@ -1,0 +1,38 @@
+python -m pip install Django==5.0.6
+python -m django --version
+pip install django
+
+django-admin startproject cpnetuni
+python manage.py startapp
+python manage.py migrate
+python manage.py makemigrations accounts
+python manage.py makemigrations books_images_contents
+python manage.py makemigrations primary
+python manage.py makemigrations logos
+python manage.py makemigrations blogs
+python manage.py runserver
+pip install postgres
+pip install psycopg2
+pip install Pillow
+pip install django-tinymce
+pip install django-heroku
+pip install stripe
+pip install whitenoise
+pip install gunicorn
+pip install reportlab
+pip freeze > requirements.txt
+python manage.py flush
+
+python manage.py check --deploy
+
+python manage.py createsuperuser
+
+python manage.py runserver
+
+python manage.py collectstatic --noinput
+
+
+
+mv ./book_images ./books_images_contents
+
+
