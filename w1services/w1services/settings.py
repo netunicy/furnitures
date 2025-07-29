@@ -10,9 +10,9 @@ with open(os.path.join(BASE_DIR,'secret_key.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = ['*','127.0.0.1:8000','localhost','www.w1services.com','w1services.com','w1sales-bd7cd201fd53.herokuapp.com/']
 
 
 # Application definition
@@ -112,14 +112,14 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#SECURE_SSL_REDIRECT = True
-#SECURE_HSTS_SECONDS= 31536000
-#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-#SECURE_HSTS_PRELOAD = True
-#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-#SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS= 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -132,7 +132,7 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'api'
 EMAIL_HOST_PASSWORD = ''
 
-CSRF_TRUSTED_ORIGINS = ['https://www.', 'https:// /']
+CSRF_TRUSTED_ORIGINS = ['https://www.w1services.com', 'https://w1services.com/']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
