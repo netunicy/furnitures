@@ -12,7 +12,7 @@ with open(os.path.join(BASE_DIR,'secret_key.txt')) as f:
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','127.0.0.1:8000','localhost','www.w1services.com','w1services.com','w1sales-bd7cd201fd53.herokuapp.com/']
+ALLOWED_HOSTS = ['*','127.0.0.1:8000','localhost','w1services.com','w1sales-bd7cd201fd53.herokuapp.com']
 
 
 # Application definition
