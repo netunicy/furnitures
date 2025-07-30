@@ -38,7 +38,18 @@
         <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Send</button>
+
+        <label for="captcha">Type the letters:</label><br>
+        <img src="{{ captcha_url }}" alt="Captcha"><br>
+        <input type="hidden" name="captcha_0" value="{{ captcha_key }}">
+        <input type="text" id="captcha" name="captcha_1" required>
     </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if success %}
+        <p style="color: green;">Message sent successfully!</p>
+    {% endif %}
 </body>
 {% include "footer.html" %}
 </html>
