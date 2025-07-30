@@ -41,15 +41,9 @@ with open(os.path.join(BASE_DIR, 'mailtrap_token.txt')) as f:
 
 def contact_us(request):
     mylogo_home='https://res.cloudinary.com/htyiufnla/image/upload/v1753800919/ChatGPT_Image_Jul_29_2025_05_54_59_PM_f9dtol.png'
-    new_key = CaptchaStore.generate_key()
-    captcha_url = captcha_image_url(new_key)
-    context = {
-      'mylogo':mylogo_home,
-      'captcha_url': captcha_url,
-      'captcha_key': new_key,
-       }
+    form = ContactForm()
     if request.method == 'POST':
-        form = ContactForm(request.POST, request.FILES)
+        form = ContactForm(request.POST)
         if form.is_valid():
             # Ανάκτηση δεδομένων φόρμας
             name = form.cleaned_data['name']
@@ -74,6 +68,9 @@ def contact_us(request):
         return redirect('homepage')
     
     else:
-        form = ContactForm()
-    return render(request, "contact_us.html", {'form': form})
+        context = {
+           'mylogo': mylogo_home,
+           'form': form
+           }
+        return render(request, "contact_us.html", context)
                 
