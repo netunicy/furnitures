@@ -16,43 +16,19 @@
         <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
         <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
     </div>
-    
     <h1>Contact Us</h1>
-    {% if error %}
-        <p id='captcha' style="color: red;">{{ error }}</p>
-    {% endif %}
-    {% if success %}
-        <p style="color: green;">Message sent successfully!</p>
-    {% endif %}
-
-    <form method="post" class="contact-form">
-        {% csrf_token %}
-        <label for="first_name">Name:</label>
-        <input type="text" id="first_name" name="first_name" required>
-
-        <label for="last_name">Surname:</label>
-        <input type="text" id="last_name" name="last_name" required>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <label for="captcha">Type the letters:</label><br>
-        <img src="{{ captcha_url }}" alt="Captcha"><br>
-        <input type="hidden" name="captcha_0" value="{{ captcha_key }}">
-        <input type="text" id="captcha" name="captcha_1" required>
-
-        <button type="submit">Send</button>
-
-    </form>
+    <div class="contact-form">
+        <form method="post" id="contact" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Αυτό κάνει render όλα τα πεδία της φόρμας, συμπεριλαμβανομένου του CAPTCHA -->
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+            <p class="copyright">
+                Designed by CP Software Creation
+            </p>
+        </form>
+    </div>
 </body>
 {% include "footer.html" %}
 </html>
