@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'w1sales.apps.W1SalesConfig',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -130,7 +131,13 @@ EMAIL_PORT = 587  # Mailtrap SMTP port
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'api'
-EMAIL_HOST_PASSWORD = 'dc39a063d80a048abe72803d5aa634c1'
+EMAIL_HOST_PASSWORD = '75e3264211ba8bb7408e87ff76e9bd38'
+
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'  # Default είναι τυχαία γράμματα
+CAPTCHA_LENGTH = 6  # Μήκος του CAPTCHA
+CAPTCHA_IMAGE_SIZE = (200, 50)  # Διαστάσεις εικόνας
+CAPTCHA_FONT_SIZE = 36  # Μέγεθος γραμματοσειράς
+CAPTCHA_TIMEOUT = 5  # Διάρκεια ισχύος CAPTCHA σε λεπτά
 
 CSRF_TRUSTED_ORIGINS = ['https://www.w1services.com', 'https://w1services.com/']
 

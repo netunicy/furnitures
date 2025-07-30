@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="{% static 'w1sales/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'w1sales/main_page.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title>Document</title>
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <title>Homepage</title>
 </head>
 <body>
     <img class='logo' src="{{ mylogo }}" alt="My Logo">
@@ -19,9 +19,54 @@
         <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
         <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
     </div>
-   
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <p id='message'>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <section class="welcome-section">
+        <h1>Welcome to W1 Services</h1>
+        <p>
+            At <strong>W1 Services</strong>, we believe that furnishing your home should be easy, affordable, and stress-free. 
+            Located in the heart of North London, we are proud to offer a wide selection of quality 
+            <strong>furniture and domestic appliances</strong> designed to fit every home and budget.
+        </p>
+        <p>
+            Whether you’re moving into a new place, upgrading your living space, or simply replacing 
+            an old appliance, W1 Services is your trusted partner. We provide 
+            <strong>electric cookers, fridges, freezers, washing machines, wardrobes, sofas, tables, chairs, and much more</strong> 
+            – all at competitive prices.
+        </p>
+        <p>
+            We understand the importance of convenience, which is why we offer 
+            <strong>same-day and next-day delivery</strong>, ensuring that your chosen products reach your home quickly and safely. 
+            Our experienced team is dedicated to helping you find exactly what you need while delivering a 
+            smooth and hassle-free shopping experience.
+        </p>
+        <p>
+            At W1 Services, quality and affordability go hand in hand. Every product we offer is carefully 
+            selected to meet high standards of durability and functionality, giving you long-lasting value 
+            without stretching your budget.
+        </p>
+        <p>
+            Our mission is simple: <strong>to make home furnishing accessible to everyone</strong>. We combine great products, 
+            fast delivery, and friendly customer service to ensure you feel confident and satisfied with every purchase.
+        </p>
+        <p>
+            Discover how W1 Services can transform your home with stylish, reliable, and affordable solutions. 
+            Browse our latest arrivals, explore our special offers, and let us help you create a home 
+            that’s comfortable and welcoming.
+        </p>
+        <p class="highlight-text">
+            Thank you for choosing W1 Services – <em>where quality meets affordability, and customer satisfaction is always our priority</em>.
+        </p>
+    </section>
 
     
+
+
 </body>
 {% include "footer.html" %}
 </html>
