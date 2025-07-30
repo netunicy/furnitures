@@ -69,3 +69,23 @@ html, body {
 span {
     color: rgb(218, 213, 213);
 }
+
+h1 {
+    display: inline-block;
+    width: fit-content;       /* Περιορίζει το πλάτος στο κείμενο */
+    background-color: #d0d2d3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 2rem 2rem 1rem 3rem;
+    border: 1px solid #000;
+}
+
+p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    text-align: left;
+    font-size: 25px;
+    margin: 0.5rem 3rem;   /* Μικρότερο κενό πάνω/κάτω */
+    line-height: 1.5;
+}

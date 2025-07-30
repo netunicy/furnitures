@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'w1sales/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'w1sales/main_page.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Document</title>
 </head>
 <body>
     <img class='logo' src="{{ mylogo }}" alt="My Logo">
+    <div class="topnav">
+        <a href="{% url 'w1sales:about_us' %}"><span><i class="fa fa-info-circle"></span></i> About Us</a>
+        <a href="{% url 'w1sales:services' %}"><span><i class="fa fa-cogs"></span></i> Services</a>
+        <a href="#products"><span><i class="fa fa-th-large"></span></i> Products</a>
+        <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
+        <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
+    </div>
+   
+
     
 </body>
 {% include "footer.html" %}

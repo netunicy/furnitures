@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'w1sales/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'w1sales/services.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About_us</title>
+</head>
+<body>
+    <img class='logo' src="{{ mylogo }}" alt="My Logo">
+    <div class="topnav">
+        <a href="{% url 'w1sales:about_us' %}"><span><i class="fa fa-info-circle"></span></i> About Us</a>
+        <a href="{% url 'w1sales:services' %}"><span><i class="fa fa-cogs"></span></i> Services</a>
+        <a href="#products"><span><i class="fa fa-th-large"></span></i> Products</a>
+        <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
+        <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
+    </div>
+    <h1>🛠️ Our Services </h1>
+    <p>At W1 Services, we pride ourselves on offering more than just quality furniture and 
+        home appliances. We deliver a complete service experience, designed to make your 
+        journey of furnishing and equipping your home smooth, convenient, and stress-free.</p>
+    <p>For customers looking to refresh their spaces, we provide custom furniture solutions. 
+        We can source or adapt pieces to meet specific dimensions or styles, helping you achieve a 
+        personalized look for your home.</p>
+    <p>Furthermore, our after-sales support ensures that you continue to receive assistance 
+        long after your purchase. From warranty handling to product maintenance advice, 
+        we are always available to help you get the most out of your furniture and appliances.</p>
+    <p>At W1 Services, our mission is simple: to offer end-to-end solutions that transform houses into comfortable, 
+        functional, and stylish homes. With quality products, expert guidance, and dependable services, 
+        we make home furnishing easier and more enjoyable than ever.</p>
+</body>
+{% include "footer.html" %}
+</html>

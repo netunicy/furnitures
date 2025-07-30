@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'w1sales/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'w1sales/about_us.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About_us</title>
+</head>
+<body>
+    <img class='logo' src="{{ mylogo }}" alt="My Logo">
+    <div class="topnav">
+        <a href="{% url 'w1sales:about_us' %}"><span><i class="fa fa-info-circle"></span></i> About Us</a>
+        <a href="{% url 'w1sales:services' %}"><span><i class="fa fa-cogs"></span></i> Services</a>
+        <a href="#products"><span><i class="fa fa-th-large"></span></i> Products</a>
+        <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
+        <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
+    </div>
+    <h1>About Us</h1>
+    <p>Welcome to W1 Services, a trusted destination for affordable furniture and domestic 
+        appliances in London. With years of experience in the home furnishing industry, 
+        we are proud to offer a wide selection of high-quality products designed to make 
+        furnishing and equipping your home both affordable and hassle-free.</p>
+    <p>W1 Services is the trading name of Nuxway Limited, a UK-registered company 
+        operating under company number 08888846. As a legally established and transparent business, 
+        we are committed to providing reliable products and services to our customers, maintaining 
+        the highest standards of professionalism and trustworthiness.</p>
+    <p>At W1 Services, we understand the importance of comfort and practicality when choosing furniture 
+        or appliances for your home. Our extensive collection includes electric cookers, fridges, 
+        washing machines, wardrobes, beds, mattresses, sofas, tables, and chairs, catering to diverse 
+        styles and needs. Whether you’re moving into a new property, upgrading your living space, 
+        or replacing essential appliances, we have everything you need under one roof.</p>
+    <p>Our philosophy is to combine affordability and quality, ensuring that every customer can access 
+        well-designed furniture and durable home appliances without exceeding their budget. 
+        From cost-effective wardrobes and headboards to orthopedic mattresses and premium sofas, 
+        every item is carefully selected to deliver the best value for money.</p>
+    <p>Beyond our products, our customer-focused service sets us apart. We believe in making shopping seamless 
+        and stress-free, offering fast and reliable delivery options to get your furniture and 
+        appliances to your home promptly. Our professional team handles every order with care, 
+        ensuring that your items arrive in perfect condition and ready to use.</p>
+    <p>Over the years, we have built a reputation as a dependable retailer for affordable home 
+        solutions in London. We understand that each home has unique requirements, which 
+        is why our experienced team is always ready to help customers select the right 
+        products that match their lifestyle and space. From helping young families furnish 
+        their first homes to supporting landlords and property developers with bulk orders, 
+        we serve a wide range of customers with the same dedication.</p>
+    <p>Our long-term vision is to continue growing as a reliable and customer-oriented furniture 
+        and appliance provider. We are constantly looking for ways to expand our product range, 
+        enhance our delivery services, and improve the shopping experience, both in-store and online.</p>
+    <p>At W1 Services, we don’t just sell products—we help you create a comfortable, stylish, 
+        and functional home. Our passion lies in transforming living spaces into places where 
+        comfort meets practicality, allowing you to focus on what truly matters—making lasting 
+        memories with your loved ones.</p>
+</body>
+{% include "footer.html" %}
+</html>

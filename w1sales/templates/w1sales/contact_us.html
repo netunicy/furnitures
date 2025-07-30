@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'w1sales/contact_us.css' %}">
+    <title>Contact Us</title>
+</head>
+<body>
+    <img class='logo' src="{{ mylogo }}" alt="My Logo">
+    <div class="topnav">
+        <a href="{% url 'w1sales:about_us' %}"><span><i class="fa fa-info-circle"></span></i> About Us</a>
+        <a href="{% url 'w1sales:services' %}"><span><i class="fa fa-cogs"></span></i> Services</a>
+        <a href="#products"><span><i class="fa fa-th-large"></span></i> Products</a>
+        <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
+        <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
+    </div>
+    <h1>Contact Us</h1>
+    <form method="post" class="contact-form">
+        {% csrf_token %}
+        <label for="first_name">Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Surname:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+{% include "footer.html" %}
+</html>
