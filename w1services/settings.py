@@ -131,7 +131,7 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'api'
 EMAIL_HOST_PASSWORD = '75e3264211ba8bb7408e87ff76e9bd38'
 
-CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'  # Default είναι τυχαία γράμματα
+CAPTCHA_CHALLENGE_FUNCTION = 'captcha.helpers.random_char_challenge'  # Default είναι τυχαία γράμματα
 CAPTCHA_LENGTH = 6  # Μήκος του CAPTCHA
 CAPTCHA_IMAGE_SIZE = (200, 50)  # Διαστάσεις εικόνας
 CAPTCHA_FONT_SIZE = 36  # Μέγεθος γραμματοσειράς
