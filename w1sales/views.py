@@ -64,8 +64,8 @@ def contact_us(request):
         client = mt.MailtrapClient(token=MAILTRAP_API_TOKEN)
         client.send(mail)
 
-        messages.add_message(request, messages.INFO, 'Your message has been successfully sent. We will get back to you within 2 business days at the latest.')
-        return redirect('homepage')
+        messages.add_message(request, messages.INFO, 'Your message has been successfully sent. One of our representatives will contact you shortly.')
+        return redirect('w1sales')
     
     else:
         context = {
