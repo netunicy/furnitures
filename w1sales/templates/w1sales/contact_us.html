@@ -20,7 +20,7 @@
     <div class="contact-form">
         <form method="post" id="contact" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}  <!-- Αυτό κάνει render όλα τα πεδία της φόρμας, συμπεριλαμβανομένου του CAPTCHA -->
+            {{ form.as_p }}
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
             </fieldset>
