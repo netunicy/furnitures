@@ -11,6 +11,7 @@ urlpatterns = [
     path('w1sales/', include(('w1sales.urls','w1sales'),namespace='w1sales')),
     #path('contacts/', include(('contacts.urls','contacts'),namespace='contacts')),
     path('favicon.ico', RedirectView.as_view(url='/staticfiles/favico/favicon.ico')),
+    path('captcha/', include('captcha.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
