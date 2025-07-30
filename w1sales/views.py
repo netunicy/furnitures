@@ -75,6 +75,6 @@ def contact_us(request):
         'mylogo': mylogo_home,
         'form': form
     }
-    return render(request, "contact_us.html", context)
+    return render(request, "contact_us_form.html", {'form': form})
 
                 
