@@ -40,7 +40,6 @@ with open(os.path.join(BASE_DIR, 'mailtrap_token.txt')) as f:
     MAILTRAP_API_TOKEN = f.read().strip()
 
 def contact_us(request):
-    mylogo_home = 'https://res.cloudinary.com/htyiufnla/image/upload/v1753800919/ChatGPT_Image_Jul_29_2025_05_54_59_PM_f9dtol.png'
     form = ContactForm()
 
     if request.method == 'POST':
@@ -71,10 +70,9 @@ def contact_us(request):
             return redirect('w1sales')
 
     # ✅ Common context for both GET and failed POST
-    context = {
-        'mylogo': mylogo_home,
-        'form': form
-    }
-    return render(request, "contact_us_form.html", {'form': form})
+    else:
+        form = ContactForm()
+
+    return render(request, "contact_us.html", {'form': form})
 
                 
