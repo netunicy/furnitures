@@ -108,10 +108,8 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-MEDIA_URL = '/media/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
@@ -142,6 +140,7 @@ CAPTCHA_TIMEOUT = 5  # Διάρκεια ισχύος CAPTCHA σε λεπτά
 CSRF_TRUSTED_ORIGINS = ['https://www.w1services.com', 'https://w1services.com/']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_CHARSET = 'utf-8'
 
 with open(os.path.join(BASE_DIR, 'stripe_keys.txt')) as f:
     lines = f.readlines()
