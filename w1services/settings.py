@@ -137,7 +137,9 @@ CAPTCHA_IMAGE_SIZE = (200, 50)  # Διαστάσεις εικόνας
 CAPTCHA_FONT_SIZE = 36  # Μέγεθος γραμματοσειράς
 CAPTCHA_TIMEOUT = 5  # Διάρκεια ισχύος CAPTCHA σε λεπτά
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_TRUSTED_ORIGINS = ['https://www.w1services.com', 'https://w1services.com/']
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_CHARSET = 'utf-8'
