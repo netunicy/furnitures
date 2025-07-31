@@ -150,6 +150,11 @@ h1 {
     width: 10rem;
     margin-top: 2rem;
 }
+
+.custom-size9 {
+    width: 13rem;
+    margin-top: 2rem;
+}
 .product-title {
     font-size: 1.2rem;
     margin: 0.5rem 0;
