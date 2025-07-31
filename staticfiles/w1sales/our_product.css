@@ -1,10 +1,18 @@
-html, body {
+html {
     font-size: 20px;
     width: 100%;
     height: 100%;
     font-family: "Times New Roman", Times, serif;
     background-color: #f8f8f8;
 
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body covers the full viewport height */
 }
 
 .logo {
@@ -79,4 +87,90 @@ h1 {
     font-size: 20px;
     margin: 2rem 2rem 1rem 3rem;
     border: 1px solid #000;
+}
+
+.products-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Για να κατεβαίνουν σε δεύτερη σειρά αν δεν χωράνε */
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-card {
+    width: 18rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 10rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.custom-size {
+    width: 6.7rem;
+}
+
+.custom-size3 {
+    width: 17rem;
+}
+
+.custom-size4 {
+    width: 13rem;
+}
+
+.custom-size5 {
+    width: 17rem;
+}
+.custom-size6 {
+    width: 18rem;
+    margin-top: 2rem;
+}
+
+.custom-size7 {
+    width: 17rem;
+    margin-top: 3rem;
+}
+
+.custom-size8 {
+    width: 10rem;
+    margin-top: 2rem;
+}
+.product-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-title3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #0d15f6;
+    font-weight: bold;
 }
