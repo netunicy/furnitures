@@ -1,0 +1,82 @@
+html, body {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f8f8f8;
+
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: logoFadeIn 1.5s ease-out forwards;
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.topnav {
+  background-color: #77d2f8;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 17rem;
+  display: flex;
+  justify-content: flex-start; /* Τα links πάνε αριστερά */
+  align-items: center;         
+  padding: 5px;
+  border-radius: 8px;          
+}
+
+.topnav a {
+  text-align: center;
+  display: inline-block;
+  color: #000000;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  transition: background 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+
+.topnav a:hover {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+
+span {
+    color: rgb(218, 213, 213);
+}
+
+h1 {
+    display: inline-block;
+    width: fit-content;       /* Περιορίζει το πλάτος στο κείμενο */
+    background-color: #d0d2d3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 2rem 2rem 1rem 3rem;
+    border: 1px solid #000;
+}

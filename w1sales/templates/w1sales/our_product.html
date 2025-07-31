@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'w1sales/contact_us.css' %}">
-    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'w1sales/our_product.css' %}">
+    <title>Products</title>
 </head>
 <body>
     <img class='logo' src="https://res.cloudinary.com/htyiufnla/image/upload/v1753800919/ChatGPT_Image_Jul_29_2025_05_54_59_PM_f9dtol.png" alt="My Logo">
@@ -16,19 +16,8 @@
         <a href="#store"><span><i class="fa fa-shopping-cart"></span></i> Online Store</a>
         <a href="{% url 'w1sales:contact_us' %}"><span><i class="fa fa-envelope"></span></i> Contact Us</a>
     </div>
-    <h1>Contact Us</h1>
-    <div class="contact-form">
-        <form method="post" id="contact" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-            </fieldset>
-            <p class="copyright">
-                Designed by CP Software Creation
-            </p>
-        </form>
-    </div>
+    <h1>Our Products</h1>
+    
 </body>
 {% include "footer.html" %}
 </html>

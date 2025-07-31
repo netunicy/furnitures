@@ -75,4 +75,10 @@ def contact_us(request):
 
     return render(request, "contact_us.html", {'form': form})
 
-                
+def our_products(request):
+  mylogo_home='https://res.cloudinary.com/htyiufnla/image/upload/v1753800919/ChatGPT_Image_Jul_29_2025_05_54_59_PM_f9dtol.png'
+  template = loader.get_template('our_product.html')
+  context = {
+    'mylogo':mylogo_home,
+  }
+  return HttpResponse(template.render(context, request))
