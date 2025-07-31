@@ -31,8 +31,8 @@ html, body {
 .topnav {
   background-color: #77d2f8;
   margin-top: 2rem;
-  margin-left: 3rem;
-  margin-right: 17rem;
+  margin-left: 16.5rem;
+  margin-right: 16.5rem;
   display: flex;
   justify-content: flex-start; /* Τα links πάνε αριστερά */
   align-items: center;         
