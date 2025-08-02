@@ -179,3 +179,218 @@ h1 {
     color: #0d15f6;
     font-weight: bold;
 }
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+        html {
+        font-size: 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    body {
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+    }
+
+    .logo {
+        width: 150px;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .topnav {
+        margin: 1rem auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border-radius: 6px;
+        max-width: 80%;
+    }
+
+    .topnav a {
+        font-size: 20px;
+        padding: 8px 12px;
+        margin: 0.3rem;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding: 5px 8px;
+        display: block;
+        text-align: left;
+        width: fit-content;
+        margin-left: 2rem;
+    }
+     .products-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .product-image {
+        width: 100%;
+        max-width: 12rem;
+        margin: 0 auto 1rem auto;
+        display: block;
+    }
+
+    .custom-size,
+    .custom-size3,
+    .custom-size4,
+    .custom-size5,
+    .custom-size6,
+    .custom-size7,
+    .custom-size8,
+    .custom-size9 {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .product-title {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .product-title3 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    .product-price {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+  }
+@media only screen and (max-width: 1024px) and (max-height: 600px) and (orientation: landscape) {
+    html {
+        font-size: 17px;
+        width: 100%;
+        height: auto;
+    }
+
+    body {
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+    }
+
+    .logo {
+        width: 160px;
+        margin: 0.5rem auto;
+        display: block;
+    }
+
+    .topnav {
+        margin: 0.5rem auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border-radius: 6px;
+        max-width: 95%;
+    }
+
+    .topnav a {
+        font-size: 18px;
+        padding: 6px 10px;
+        margin: 0.3rem;
+    }
+
+    h1 {
+        font-size: 19px;
+        padding: 5px 8px;
+        display: block;
+        text-align: left;
+        width: fit-content;
+    }
+    .products-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .product-card {
+        width: 45%;
+        max-width: 20rem;
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .product-image {
+        width: 100%;
+        max-width: 12rem;
+        margin: 0 auto 1rem auto;
+        display: block;
+    }
+
+    .custom-size,
+    .custom-size3,
+    .custom-size4,
+    .custom-size5,
+    .custom-size6,
+    .custom-size7,
+    .custom-size8,
+    .custom-size9 {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .product-title {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .product-title3 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .product-description {
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    .product-price {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+    .logo {
+        width: 250px;
+        margin-left: 3rem;
+        margin-top: 3rem;
+    }
+    .topnav {
+      margin-top: 2rem;
+      margin-left: 22rem;
+      margin-right: 22rem;
+      justify-content:center;         
+    }
+    .topnav a {
+        font-size: 27px;
+        margin: 0 2rem;
+        text-align: center;
+    }
+    h1 {
+        font-size: 30px;
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+}
